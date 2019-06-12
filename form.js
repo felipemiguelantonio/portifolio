@@ -9,8 +9,8 @@ botaoAdicionar.addEventListener("click", function(event) {
    
 
     adicionaPacienteNaTabela(paciente);
-
-    
+  
+    form.reset();  
 
 });
 
