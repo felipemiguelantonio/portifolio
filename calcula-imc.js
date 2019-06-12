@@ -14,22 +14,24 @@ for (var i = 0; i < pacientes.length; i++) {
 
     var tdImc = paciente.querySelector(".info-imc");
 
-    
-   if(peso <= 0 || peso > 300){
-       tdPeso.textContent="Peso invalido!";
-          tdImc.textContent="?";
-       
-      if(altura <=0 || altura >3.00){
-         tdAltura.textContent="Altura invalida!";
-          tdImc.textContent="?";
-         }
-       
-      }
+    if(peso <=0 || peso > 300){
+       tdPeso.textContent = "Peso invalida!";
+            tdImc.textContent = "?";
+            
+       }
+   else if(altura <=0 || altura >2.50){
+            tdAltura.textContent = "Altura invalida!";
+            tdImc.textContent = "?";
+            }  
      else{
          var imc = calculaImc(peso,altura);
          tdImc.textContent = imc;
+     }
+    
+    
+         
   
-       }
+       
       
 }
 

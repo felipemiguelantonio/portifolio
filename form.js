@@ -22,6 +22,7 @@ function obtemPacienteDoFormulario(form) {
         altura: form.altura.value,
         
         imc: calculaImc(form.peso.value, form.altura.value)
+        
     }
 
     return paciente;
@@ -36,6 +37,7 @@ function montaTr(paciente) {
     pacienteTr.appendChild(montaTd(paciente.altura, "info-altura"));
     
     pacienteTr.appendChild(montaTd(paciente.imc, "info-imc"));
+   
 
     return pacienteTr;
 }
@@ -53,4 +55,5 @@ function adicionaPacienteNaTabela(paciente) {
     var pacienteTr = montaTr(paciente);
     var tabela = document.querySelector("#tabela-pacientes");
     tabela.appendChild(pacienteTr);
+    
 }
